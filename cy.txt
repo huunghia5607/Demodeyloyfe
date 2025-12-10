@@ -1,0 +1,60 @@
+git clone https://github.com/huunghia5607/Demodeyloyfe.git .
+
+
+Sao chép file TrangCaNhan.html và các thư mục liên quan vào thư mục Demodeyloyfe đang mở trong VS Code.
+
+git add .
+git commit -m "feat: initial commit of TrangCaNhan.html and associated files"
+
+git push origin main
+
+mkdir -p .github/workflowsMở Explorer trong VS Code (Ctrl+Shift+E).
+
+Tạo file deploy.yml trong thư mục .github/workflows.
+
+Dán Nội dung sau vào deploy.yml: (Đảm bảo đã thêm các Secrets FTP vào Repo GitHub trước đó)
+
+YAML
+
+# Tên của quy trình CI/CD
+name: Deploy TrangCaNhan WebFE via FTP
+
+on:
+  push:
+    branches:
+      - main # Kích hoạt khi có thay đổi trên nhánh main
+
+jobs:
+  web-deploy:
+    name: Deploy to Webhost
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Tải code từ GitHub
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    # 2. Triển khai bằng FTP
+    - name: FTP Deploy to Somee Host
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.0
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+
+        # Thư mục gốc code trên máy cục bộ
+        local-dir: ./ 
+
+        # Thư mục đích chính xác trên host
+        remote-dir: /www.Nghia2k4.somee.com/PhamHuuNghia/
+
+git add .github/workflows/deploy.yml
+git commit -m "ci: add GitHub Actions workflow for TrangCaNhan FTP deployment"
+
+
+git push origin main
+
+
+FTP_SERVER	Nghia2k4.somee.com
+FTP_USERNAME	JKAMBROSE
+FTP_PASSWORD	Mật khẩu control panel của bạn
