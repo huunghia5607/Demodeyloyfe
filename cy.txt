@@ -58,3 +58,9 @@ git push origin main
 FTP_SERVER	Nghia2k4.somee.com
 FTP_USERNAME	JKAMBROSE
 FTP_PASSWORD	Mật khẩu control panel của bạn
+
+
+
+git add .
+git commit -m "fix: update 'Bài tập' text to 'ASSD'"
+git push origin main
