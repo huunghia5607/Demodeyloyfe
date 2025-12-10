@@ -1,0 +1,733 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px; /* Font mặc định */
+    margin: 0;
+    padding: 0;
+}
+
+.boxcenter {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.mb {
+    margin-bottom: 2rem;
+}
+
+.mb10 {
+    margin-bottom: 1rem;
+}
+
+.mr {
+    margin-right: 2%;
+}
+
+.header {
+    background-color: aquamarine;
+    border: 1px solid #009900;
+    color: blue;
+    border-radius: 5px;
+    display: block;
+}
+
+.footer {
+    background-color: aquamarine;
+    border: 1px solid #009900;
+    color: blue;
+    border-radius: 5px;
+    padding: 1.5rem;
+    text-align: center;
+    display: block;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin: 1.5rem;
+    text-align: center;
+}
+
+.menu {
+    background-color: black;
+    color: #ccc;
+    border-radius: 5px;
+    display: block !important;
+    position: relative;
+}
+
+.menu .hamburger {
+    display: none;
+    font-size: 1.5rem;
+    color: #ccc;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+}
+
+.menu ul {
+    padding: 0 1.25rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    list-style-type: none;
+}
+
+.menu ul li {
+    padding: 1rem 1.25rem;
+}
+
+.menu ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 1rem;
+}
+
+.menu ul li a:hover {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.boxtrai {
+    width: 74%;
+    flex: 1;
+}
+
+.boxphai {
+    width: 24%;
+    flex: 0 0 24%;
+}
+
+.boxtitle {
+    color: #333;
+    padding: 1rem;
+    background-color: #eee;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.25rem;
+}
+
+.boxcontent {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    min-height: 150px;
+    padding: 1.5rem;
+    display: block;
+}
+
+.boxcontent h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.boxcontent h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.boxcontent2 {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background-color: #eee;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.boxfooter {
+    padding: 1rem;
+    background-color: #eee;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.banner {
+    min-height: 300px;
+    width: 100%;
+    text-align: center;
+}
+
+.boxsp {
+    width: 31%;
+    min-height: 350px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    margin-right: 2%;
+    display: block;
+}
+
+.boxsp:last-child {
+    margin-right: 0;
+}
+
+.boxsp a {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.boxsp a:hover {
+    color: rgb(243, 0, 0);
+    text-decoration: underline;
+}
+
+.boxsp .img {
+    min-height: 280px;
+    text-align: center;
+}
+
+.img img {
+    height: 260px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.formtaikhoan {
+    line-height: 150%;
+}
+
+.formtaikhoan input[type="text"],
+.formtaikhoan input[type="password"],
+.formtaikhoan input[type="email"],
+.formtaikhoan textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.formtaikhoan input[type="checkbox"] {
+    border-radius: 5px;
+}
+
+.formtaikhoan input[type="submit"] {
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 1rem;
+}
+
+.formtaikhoan input[type="submit"]:hover {
+    background-color: #ccc;
+}
+
+.formtaikhoan li a {
+    color: cadetblue;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.formtaikhoan li a:hover {
+    color: #998200;
+    text-decoration: underline;
+}
+
+.menudoc ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menudoc ul li {
+    padding: 0.75rem 1.25rem;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.menudoc ul li a {
+    color: #4682b4;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+}
+
+.menudoc ul li:hover {
+    background-color: #e6f0fa;
+}
+
+.menudoc ul li:hover a {
+    color: #2f5a8b;
+}
+
+.Seachbox input[type="text"] {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.Seachbox input[type="text"]:focus {
+    border-color: #4682b4;
+    outline: none;
+}
+
+.top10 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.top10 img {
+    width: 20%;
+    height: 50px;
+    margin-right: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #666;
+    object-fit: contain;
+}
+
+.top10 a {
+    color: #666;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    font-size: 1rem;
+}
+
+.top10 a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* Đảm bảo ảnh phù hợp với container */
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+    max-height: 300px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    bottom: 40px;
+    width: auto;
+    padding: 1rem 1.25rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+    border-radius: 50%;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Position the "prev button" to the left */
+.prev {
+    left: 25px;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 25px;
+}
+
+/* On hover, add a darker background color */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #000000;
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 0.75rem;
+    padding: 0.75rem 1rem;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 3px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4 }
+    to { opacity: 1 }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .boxcenter {
+        width: 90%;
+    }
+
+    .header h1 {
+        font-size: 1.75rem;
+    }
+
+    .menu ul li {
+        padding: 0.75rem 1rem;
+    }
+
+    .menu ul li a {
+        font-size: 0.9rem;
+    }
+
+    .menu ul li a:hover {
+        font-size: 1rem;
+    }
+
+    .boxtrai, .boxphai {
+        width: 100%;
+        flex: none;
+    }
+
+    .boxphai {
+        margin-top: 1.5rem;
+    }
+
+    .boxsp {
+        width: 48%;
+        margin-right: 4%;
+        min-height: 300px;
+    }
+
+    .boxsp:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .slideshow-container {
+        height: 250px;
+    }
+
+    .mySlides img {
+        max-height: 250px;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .numbertext {
+        font-size: 0.75rem;
+    }
+
+    .prev, .next {
+        bottom: 30px;
+        font-size: 1.25rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .boxsp .img {
+        min-height: 200px;
+    }
+
+    .img img {
+        height: 180px;
+    }
+
+    .top10 img {
+        width: 20%;
+        height: 50px;
+    }
+
+    .top10 a {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        font-size: 1rem;
+    }
+
+    .boxtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .boxcenter {
+        width: 95%;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu {
+        display: block !important;
+    }
+
+    .menu .hamburger {
+        display: block !important;
+        font-size: 2rem; /* Từ Fallback CSS */
+        padding: 10px 15px; /* Từ Fallback CSS */
+        color: #ccc; /* Từ Fallback CSS */
+        cursor: pointer; /* Từ Fallback CSS */
+    }
+
+    .menu ul {
+        display: none; /* Từ Fallback CSS */
+        flex-direction: column; /* Từ Fallback CSS */
+        background-color: black; /* Từ Fallback CSS */
+        position: absolute; /* Từ Fallback CSS */
+        top: 100%; /* Từ Fallback CSS */
+        left: 0; /* Từ Fallback CSS */
+        width: 100%; /* Từ Fallback CSS */
+        z-index: 1; /* Từ Fallback CSS */
+    }
+
+    .menu ul.active {
+        display: flex; /* Từ Fallback CSS */
+    }
+
+    .menu ul li {
+        padding: 0.75rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu ul li a {
+        font-size: 1rem;
+    }
+
+    .menu ul li a:hover {
+        font-size: 1.1rem;
+    }
+
+    .slideshow-container {
+        height: 200px;
+    }
+
+    .mySlides img {
+        max-height: 200px;
+    }
+
+    .text {
+        font-size: 0.9rem;
+    }
+
+    .numbertext {
+        font-size: 0.75rem;
+    }
+
+    .prev, .next {
+        bottom: 25px;
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .boxsp {
+        width: 100%;
+        margin-right: 0;
+        min-height: 300px;
+    }
+
+    .boxsp .img {
+        min-height: 250px;
+    }
+
+    .img img {
+        height: 230px;
+    }
+
+    .top10 img {
+        width: 15%;
+        height: 40px;
+    }
+
+    .top10 a {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+
+    .boxtitle {
+        font-size: 1rem;
+    }
+
+    .boxcontent h2 {
+        font-size: 1.25rem;
+    }
+
+    .boxcontent h3 {
+        font-size: 1rem;
+    }
+
+    .formtaikhoan input[type="text"],
+    .formtaikhoan input[type="password"],
+    .formtaikhoan input[type="email"],
+    .formtaikhoan textarea,
+    .formtaikhoan input[type="submit"],
+    .Seachbox input[type="text"] {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .boxcenter {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .header h1 {
+        font-size: 1.25rem;
+        margin: 1rem;
+    }
+
+    .menu .hamburger {
+        font-size: 1.5rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .menu ul li {
+        padding: 0.5rem;
+    }
+
+    .menu ul li a {
+        font-size: 0.9rem;
+    }
+
+    .menu ul li a:hover {
+        font-size: 1rem;
+    }
+
+    .slideshow-container {
+        height: 150px;
+    }
+
+    .mySlides img {
+        max-height: 150px;
+    }
+
+    .text {
+        font-size: 0.75rem;
+    }
+
+    .numbertext {
+        font-size: 0.6rem;
+    }
+
+    .prev, .next {
+        bottom: 20px;
+        font-size: 0.75rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .dot {
+        height: 15px;
+        width: 15px;
+    }
+
+    .boxsp .img {
+        min-height: 200px;
+    }
+
+    .img img {
+        height: 180px;
+    }
+
+    .top10 img {
+        width: 20%;
+        height: 30px;
+    }
+
+    .top10 a {
+        font-size: 0.8rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+
+    .boxtitle {
+        font-size: 0.9rem;
+    }
+
+    .boxcontent h2 {
+        font-size: 1.1rem;
+    }
+
+    .boxcontent h3 {
+        font-size: 0.9rem;
+    }
+
+    .formtaikhoan input[type="text"],
+    .formtaikhoan input[type="password"],
+    .formtaikhoan input[type="email"],
+    .formtaikhoan textarea,
+    .formtaikhoan input[type="submit"],
+    .Seachbox input[type="text"] {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.6rem;
+    }
+}
