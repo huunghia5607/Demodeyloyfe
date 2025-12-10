@@ -64,3 +64,11 @@ FTP_PASSWORD	Mật khẩu control panel của bạn
 git add .
 git commit -m "fix: update 'Bài tập' text to 'ASSD'"
 git push origin main
+
+
+Commit file deploy.yml đã sửa:
+
+Bash
+
+git add .github/workflows/deploy.yml
+git commit -m "fix: correct FTP deploy parameter from remote-dir to server-dir"
