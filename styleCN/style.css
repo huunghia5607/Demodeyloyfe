@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+    --pink-color: #6af2a7;
+    --dark-bg: #242628;
+    --blue-accent: #0288d1;
+    --blue-hover: #01579b;
+    --light-text: #d1d1d1;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --cyan: #00bcd4;
+    --brown: #d2691e;
+    --light-bg: #f5f5dc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    /* Thay màu nền bằng hình ảnh bg1.jpg */
+    background-image: url('/PhamHuuNghia/images/bg1.jpg'); /* Đường dẫn đến hình ảnh */
+    background-size: cover; /* Hình nền phủ toàn bộ */
+    background-position: center; /* Căn giữa hình nền */
+    background-repeat: no-repeat; /* Không lặp lại hình nền */
+    background-attachment: fixed; /* Hình nền cố định khi cuộn */
+}
+
+/* Đảm bảo nội dung dễ đọc trên nền hình ảnh */
+.card {
+    width: 300px;
+    background-color: rgba(36, 38, 40, 0.9); /* Thêm độ mờ để nội dung dễ đọc */
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card__img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--pink-color);
+    transition: border-color 0.3s;
+}
+
+.card__img img:hover {
+    border-color: #e04e5a;
+}
+
+.card h2 {
+    color: white;
+    margin: 15px 0 5px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.card p {
+    color: var(--pink-color);
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.card__social {
+    margin: 15px 0;
+}
+
+.card__social a {
+    text-decoration: none;
+    color: var(--light-text);
+    margin: 0 12px;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.card__social a:hover {
+    color: var(--pink-color);
+    transform: scale(1.2);
+}
+
+.contact-btn {
+    background: none;
+    border: 2px solid var(--pink-color);
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: var(--pink-color);
+    transform: translateY(-2px);
+}
+
+.contact-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 8px;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.dropdown {
+    flex: 1;
+    position: relative;
+}
+
+.dropdown-btn {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid var(--pink-color);
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dropdown-btn:hover {
+    background-color: #2f3133;
+    transform: translateY(-2px);
+}
+
+.dropdown-btn i {
+    font-size: 10px;
+    transition: transform 0.3s;
+}
+
+.dropdown-btn i.rotate {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--dark-bg);
+    width: 100%;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+}
+
+.dropdown-content.show {
+    display: block;
+    max-height: 300px; /* Tăng từ 200px lên 300px */
+    overflow-y: auto; /* Thêm cuộn dọc nếu nội dung vượt quá chiều cao */
+    opacity: 1;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    display: block;
+    background-color: var(--blue-accent);
+    color: white;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--blue-hover);
+    transform: translateX(5px);
+}
+
+.container {
+    width: 300px;
+    background-color: var(--dark-bg);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    color: white;
+    transition: transform 0.3s;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+.container h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.container p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--light-text);
+}
+
+.container p strong {
+    color: var(--pink-color);
+}
+
+.link-btn {
+    display: inline-block;
+    background-color: var(--blue-accent);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px 0;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.link-btn:hover {
+    background-color: var(--blue-hover);
+    transform: translateY(-2px);
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--pink-color);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.back-btn:hover {
+    color: #e04e5a;
+    transform: translateY(-2px);
+}
+
+.back-btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.layout-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    border: 1px solid var(--blue-accent);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+}
+
+.logo {
+    flex: 1;
+    background-color: var(--cyan);
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.banner {
+    flex: 3;
+    background-color: var(--brown);
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.banner-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.banner-link:hover {
+    color: var(--light-text);
+}
+
+.main-content {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar-left, .sidebar-right {
+    flex: 1;
+    background-color: var(--light-bg);
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar-left ul, .sidebar-right ul {
+    list-style: none;
+}
+
+.sidebar-left ul li, .sidebar-right ul li {
+    margin: 10px 0;
+}
+
+.sidebar-left ul li a, .sidebar-right ul li a {
+    text-decoration: none;
+    color: var(--blue-accent);
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.sidebar-left ul li a:hover, .sidebar-right ul li a:hover {
+    color: var(--blue-hover);
+}
+
+.content {
+    flex: 3;
+    padding: 20px;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--blue-accent);
+}
+
+.content ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.content ul li {
+    margin: 10px 0;
+}
+
+.content ul li a {
+    text-decoration: none;
+    color: var(--blue-accent);
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.content ul li a:hover {
+    color: var(--blue-hover);
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: var(--blue-accent);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--blue-hover);
+}
+
+.intro-link-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.intro-link {
+    color: var(--blue-accent);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.intro-link:hover {
+    color: var(--blue-hover);
+}
