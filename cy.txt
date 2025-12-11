@@ -66,9 +66,15 @@ git commit -m "fix: update 'Bài tập' text to 'ASSD'"
 git push origin main
 
 
+
 Commit file deploy.yml đã sửa:
-
 Bash
-
 git add .github/workflows/deploy.yml
 git commit -m "fix: correct FTP deploy parameter from remote-dir to server-dir"
+git push origin main
+
+trường hợp mà đúng đường dẫn mà lỗi giao diện tùm lum thì ,ví dụ như trong flie yml chỗ server-dir: /www.Nghia2k4.somee.com/PhamHuuNghia/
+mà file muốn sửa là trangcanhan.html nằm trong đúng đường dẫn đó mà bị lỗi giao diện 
+thì đầu tiên sửa server-dir: /www.Nghia2k4.somee.com/ push lên lại sau đó ghi lại server-dir: /www.Nghia2k4.somee.com/ push lên lại 
+
+PhamHuuNghia/
