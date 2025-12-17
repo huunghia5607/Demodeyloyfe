@@ -83,8 +83,11 @@ mà file muốn sửa là trangcanhan.html nằm trong đúng đường dẫn đ
 thì đầu tiên sửa server-dir: /www.Nghia2k4.somee.com/ push lên lại sau đó ghi lại server-dir: /www.Nghia2k4.somee.com/PhamHuuNghia/ push lên lại 
 
 
-
-
+muốn docker cập nhật cái mới:
+Dừng và xóa container cũ:
+docker-compose down
+Build lại với code mới nhất và khởi động lại:
+docker-compose up -d --build
 
 môn kỹ năng giao tiếp:
 lấy code mới nhất :
