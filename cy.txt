@@ -8,9 +8,9 @@ git commit -m "feat: initial commit of TrangCaNhan.html and associated files"
 
 git push origin main
 
-mkdir -p .github/workflowsMở Explorer trong VS Code (Ctrl+Shift+E).
+mkdir -p .github/workflows
 
-Tạo file deploy.yml trong thư mục .github/workflows.
+new-item -Path .github/workflows/deploy.yml -Force
 
 Dán Nội dung sau vào deploy.yml: (Đảm bảo đã thêm các Secrets FTP vào Repo GitHub trước đó)
 
@@ -46,10 +46,15 @@ jobs:
         local-dir: ./ 
 
         # Thư mục đích chính xác trên host
-        remote-dir: /www.Nghia2k4.somee.com/PhamHuuNghia/
+       server-dir: /www.Nghia2k4.somee.com/PhamHuuNghia/
 
-git add .github/workflows/deploy.yml
-git commit -m "ci: add GitHub Actions workflow for TrangCaNhan FTP deployment"
+
+git add .
+git commit -m "feat: add schedule update and deploy workflow"
+git push origin main
+
+//git add .github/workflows/deploy.yml
+//git commit -m "ci: add GitHub Actions workflow for TrangCaNhan FTP deployment"
 
 
 git push origin main
@@ -75,6 +80,27 @@ git push origin main
 
 trường hợp mà đúng đường dẫn mà lỗi giao diện tùm lum thì ,ví dụ như trong flie yml chỗ server-dir: /www.Nghia2k4.somee.com/PhamHuuNghia/
 mà file muốn sửa là trangcanhan.html nằm trong đúng đường dẫn đó mà bị lỗi giao diện 
-thì đầu tiên sửa server-dir: /www.Nghia2k4.somee.com/ push lên lại sau đó ghi lại server-dir: /www.Nghia2k4.somee.com/ push lên lại 
+thì đầu tiên sửa server-dir: /www.Nghia2k4.somee.com/ push lên lại sau đó ghi lại server-dir: /www.Nghia2k4.somee.com/PhamHuuNghia/ push lên lại 
 
-PhamHuuNghia/
+
+
+
+
+môn kỹ năng giao tiếp:
+lấy code mới nhất :
+git pull origin main
+đẩy lên :
+ git add . hoặc git add "Kỹ năng giao tiếp.docx" 
+git commit -m "fix: correct FTP deploy parameter from remote-dir to server-dir"
+git push origin main
+nếu xung đột thì gõ để thoát ra:
+git merge --abort
+ git fetch origin
+git reset --hard origin/main
+
+ git status
+// thấy dòng sau là ok:
+On branch main
+Your branch is up to date with 'origin/main'.
+sau đó:
+git pull origin main

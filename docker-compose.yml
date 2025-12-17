@@ -1,0 +1,6 @@
+services:
+  nghia-app:
+    build: .
+    container_name: nghia-full-demo
+    ports:
+      - "8085:80"
